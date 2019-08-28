@@ -1,0 +1,52 @@
+procedure modificate
+
+cerca autore per consentire il ritorno di pagine
+
+inspubblicazione per far tornare il suo id
+
+delristampa e delsorgente perchè gli si passava anche l'id della loro pubblicazione ma non serviva
+
+aggiunta la procedura promuoviAmministratore
+
+modificato delUtente con UPDATE utente SET Ruolo = 1 WHERE ID = idUtnt;
+
+I TRIGGER SONO DA MODIFICARE
+
+si deve permettere la modifica del numero di una ristampa
+
+si deve controllare la coerenza tra DataRistampa di una ristampa e DataPubblicazione di quella pubblicazione
+
+gli utenti non connessi non possono visualizzare il profilo degli utenti iscritti
+
+/********************************************************
+TEST PER L'INSERIMENTO DI UNA PUBBLICAZIONE
+Ristampa r1 = new Ristampa( LocalDate.now(),1);
+Ristampa r2 = new Ristampa( LocalDate.now(),2);
+Ristampa r3 = new Ristampa( LocalDate.now(),3);
+ArrayList<Ristampa> lr = new ArrayList<Ristampa>();
+lr.add(r1); lr.add(r2); lr.add(r3);
+
+Sorgente s1 = new Sorgente("uri.1","tipo.1","formato.1","descrizione.1");
+Sorgente s2 = new Sorgente("uri.2","tipo.2","formato.2","descrizione.2");
+Sorgente s3 = new Sorgente("uri.3","tipo.3","formato.3","descrizione.3");
+ArrayList<Sorgente> ls = new ArrayList<Sorgente>();
+ls.add(s1); ls.add(s2); ls.add(s3);
+
+Autore a1 = new Autore("nome.1","cognome.1");
+Autore a2 = new Autore("nome.2","cognome.2");
+Autore a3 = new Autore("nome.3","cognome.3");
+Autore a4 = new Autore("sandro","rinzecchito");
+ArrayList<Autore> la = new ArrayList<Autore>();
+la.add(a1); la.add(a2); la.add(a3); la.add(a4);
+
+ParolaChiave pc1 = new ParolaChiave("parola.1");
+ParolaChiave pc2 = new ParolaChiave("parola.2");
+ParolaChiave pc3 = new ParolaChiave("parola.3");
+ParolaChiave pc4 = new ParolaChiave("gatto");
+ArrayList<ParolaChiave> lpc = new ArrayList<ParolaChiave>();
+lpc.add(pc1); lpc.add(pc2); lpc.add(pc3); lpc.add(pc4);
+
+System.out.println(MySQLDAOPubblicazioneImpl.inserisciPubb(13, "xxxthebextxxx", "illibrofinale", "io", LocalDate.now(), 666, "italina", "no", "indice", la, ls, lpc, lr));
+
+
+************************************************************/
