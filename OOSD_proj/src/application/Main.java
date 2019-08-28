@@ -27,4 +27,5 @@ public class Main extends Application {
 		DAO.connectors.MySQLDBConnector.creaConnessione();
 		launch(args);
 	}
+	
 }
