@@ -16,6 +16,6 @@ public class MySQLDBConnector {
 		{
 			return DriverManager.getConnection(url, user, password);
 		}catch(Exception ex) { ex.printStackTrace(); }
-		return null;
+		 return null;
 	}
 }
