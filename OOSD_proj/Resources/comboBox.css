@@ -1,0 +1,17 @@
+.combo-box{
+    -fx-background-color: #202020;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #009bff;
+    -fx-padding: 0 0 3 4;
+    -fx-prompt-text-fill: #999999;
+    -fx-text-fill:#aaaaaa;
+    }
+
+.combo-box .list-cell:filled:selected .text,
+.choice-box .list-cell:filled:selected .text {
+    -fx-fill: #ffffff;
+}
+
+.combo-box .arrow{
+    -fx-background-color: #009bff;
+}

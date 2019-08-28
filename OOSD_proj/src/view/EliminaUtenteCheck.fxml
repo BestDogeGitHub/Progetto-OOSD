@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="234.0" prefWidth="274.0" style="-fx-background-color: #353535;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.EliminaUtenteCheckController">
+   <children>
+      <JFXButton fx:id="yesButt" layoutX="38.0" layoutY="176.0" onAction="#yes" prefHeight="40.0" prefWidth="77.0" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="SI" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="38.0" layoutY="25.0" prefHeight="70.0" prefWidth="198.0" text="Sei sicuro di voler eliminare l'utente" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Line endX="259.0" layoutX="15.0" layoutY="103.0" startX="-14.0" stroke="#009bff" strokeWidth="3.0" AnchorPane.leftAnchor="-0.5" AnchorPane.rightAnchor="-1.0" />
+      <JFXButton fx:id="Nobutt" layoutX="153.0" layoutY="176.0" onAction="#no" prefHeight="40.0" prefWidth="77.0" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="NO" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

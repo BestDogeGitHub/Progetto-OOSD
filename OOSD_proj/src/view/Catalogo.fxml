@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="632.0" prefWidth="1132.0" style="-fx-background-color: #353535;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.CatalogoController">
+	<children>
+		<TableView fx:id="ListaPubbTable" layoutY="174.0" prefHeight="267.0" prefWidth="764.0" stylesheets="Table.css" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+			<columnResizePolicy>
+				<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+			</columnResizePolicy>
+		</TableView>
+		<JFXButton fx:id="pagSuccButt" alignment="CENTER" contentDisplay="CENTER" layoutX="619.0" layoutY="584.0" onAction="#paginaSuccessiva" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Pagina Successiva" textFill="WHITE" AnchorPane.rightAnchor="14.0">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</JFXButton>
+		<JFXButton fx:id="pagPrecButt" alignment="CENTER" contentDisplay="CENTER" layoutX="467.0" layoutY="584.0" onAction="#paginaPrecedente" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Pagina Precedente" textFill="WHITE" AnchorPane.rightAnchor="162.0">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</JFXButton>
+		<JFXButton fx:id="goToPubb" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="549.0" onAction="#apriPubblicazione" prefHeight="37.0" prefWidth="221.0" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Vai al Profilo della Pubblicazione" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</JFXButton>
+		<Line endX="318.878662109375" endY="12.5" layoutX="103.0" layoutY="85.0" startX="-100.99998474121094" startY="12.5" stroke="#009bff" strokeWidth="3.0" />
+		<Line endX="498.25" endY="584.0" layoutX="112.0" layoutY="46.0" startX="498.25" startY="522.128662109375" stroke="#009bff" strokeWidth="3.0" AnchorPane.rightAnchor="152.25" />
+		<Label layoutX="125.0" layoutY="27.0" text="Catalogo" textFill="WHITE">
+			<font>
+				<Font size="36.0" />
+			</font>
+		</Label>
+		<Label fx:id="ErrLabel" layoutX="252.0" layoutY="546.0" prefHeight="43.0" prefWidth="208.0" textFill="#009bff" wrapText="true" AnchorPane.leftAnchor="252.0">
+			<font>
+				<Font name="System Bold" size="14.0" />
+			</font>
+		</Label>
+		<HBox layoutY="144.0" prefHeight="30.0" prefWidth="900.0" spacing="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0">
+			<children>
+				<JFXButton fx:id="catalogoButt" alignment="CENTER" contentDisplay="CENTER" onAction="#visCatalogo" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Catalogo Completo" textFill="WHITE">
+					<font>
+						<Font size="14.0" />
+					</font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+				</JFXButton>
+				<JFXButton fx:id="inserimentoButt" alignment="CENTER" contentDisplay="CENTER" onAction="#visInserimento" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Ordinate Per Inserimento" textFill="WHITE">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</JFXButton>
+				<JFXButton fx:id="AggiornateButt" alignment="CENTER" contentDisplay="CENTER" onAction="#visAggiornate" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Aggiornate più di recente" textFill="WHITE">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</JFXButton>
+				<JFXButton fx:id="conDownloadButt" alignment="CENTER" contentDisplay="CENTER" onAction="#visConDownload" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Con Download" textFill="WHITE">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</JFXButton>
+			</children>
+		</HBox>
+		<ImageView fitHeight="87.0" fitWidth="82.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../Resources/lista.png" />
+			</image>
+		</ImageView>
+	</children>
+</AnchorPane>

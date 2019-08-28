@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="632.0" prefWidth="1131.0" style="-fx-background-color: #353535;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.RicercaPubblicazioniController">
+   <children>
+      <TableView fx:id="ListaPubbTable" layoutY="174.0" prefHeight="267.0" prefWidth="764.0" stylesheets="Table.css" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton fx:id="pagSuccButt" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="619.0" layoutY="584.0" onAction="#paginaSuccessiva" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Pagina Successiva" textFill="WHITE" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="pagPrecButt" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="467.0" layoutY="584.0" onAction="#paginaPrecedente" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Pagina Precedente" textFill="WHITE" AnchorPane.rightAnchor="162.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="goToPubb" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="549.0" onAction="#apriPubblicazione" prefHeight="37.0" prefWidth="221.0" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Vai al Profilo della Pubblicazione" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Line endX="391.0" endY="12.5" layoutX="103.0" layoutY="85.0" startX="-100.99998474121094" startY="12.5" stroke="#009bff" strokeWidth="3.0" />
+      <Line endX="498.25" endY="584.0" layoutX="112.0" layoutY="46.0" startX="498.25" startY="522.128662109375" stroke="#009bff" strokeWidth="3.0" AnchorPane.rightAnchor="152.25" />
+      <Label layoutX="116.0" layoutY="30.0" text="Ricerca Pubblicazioni" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="ErrLabel" layoutX="252.0" layoutY="546.0" prefHeight="43.0" prefWidth="208.0" textFill="#009bff" wrapText="true" AnchorPane.leftAnchor="252.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="71.0" fitWidth="72.0" layoutX="18.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Resources/ricerca.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="113.0" prefHeight="37.0" prefWidth="462.0" spacing="10.0" style="-fx-border-color: #009bff;">
+         <children>
+            <Label prefHeight="35.0" prefWidth="138.0" text="Ricerca Per : " textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="isbnRicButt" alignment="CENTER" contentDisplay="CENTER" onAction="#ricercaPerIsbn" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="ISBN" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="titoloRicButt" alignment="CENTER" contentDisplay="CENTER" onAction="#ricercaPerTitolo" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Titolo" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="parolaRicButt" alignment="CENTER" contentDisplay="CENTER" onAction="#ricercaPerParola" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Parola Chiave" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="autoreRicButt" alignment="CENTER" contentDisplay="CENTER" onAction="#ricercaPerAutore" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Autore" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox fx:id="ricercaHBox" alignment="CENTER" layoutX="516.0" layoutY="99.0" prefHeight="65.0" prefWidth="473.0" spacing="23.0" style="-fx-border-color: #009bff;" visible="false">
+         <children>
+            <JFXTextField fx:id="cercaText" focusColor="#009bff" style="-fx-background-color: #202020; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #909090; -jfx-label-float: true;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="CognomeAutoreText" focusColor="#009bff" promptText="Cognome" style="-fx-background-color: #202020; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #909090; -jfx-label-float: true;" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="CercaButt" alignment="CENTER" contentDisplay="CENTER" onAction="#Ricerca" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Cerca" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Label fx:id="noElemLabel" layoutX="14.0" layoutY="455.0" prefHeight="53.0" prefWidth="417.0" text="Nessun Elemento Trovato" textFill="#009bff" visible="false">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

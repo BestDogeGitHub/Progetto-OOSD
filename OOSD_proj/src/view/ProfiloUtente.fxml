@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="793.0" style="-fx-background-color: #353535;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.ProfiloUtenteController">
+   <children>
+      <Label layoutX="98.0" layoutY="41.0" text="Profilo Utente" textFill="WHITE">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <VBox layoutX="65.0" layoutY="126.0" prefHeight="395.0" prefWidth="120.0" spacing="30.0">
+         <children>
+            <Label text="UserName :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Ruolo :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Nome :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Cognome :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Email :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label depthTest="ENABLE" text="Luogo di nascita :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Data di nascita :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Residenza :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <Line endX="273.0" endY="1.0" fill="#009dff" layoutX="142.0" layoutY="96.0" startX="-141.0" startY="1.0" stroke="#009bff" />
+      <Label fx:id="ErrLabel" layoutX="535.0" layoutY="482.0" prefHeight="81.0" prefWidth="246.0" textFill="#009bff" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="193.0" layoutY="126.0" prefHeight="395.0" prefWidth="284.0" spacing="30.0">
+         <children>
+            <Label fx:id="usernameLabel" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="ruoloLabel" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="nomeLabel" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="cognomeLabel" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailLabel" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="luogoNascitaLabel" depthTest="ENABLE" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="dataNascitaLabel" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="residenzaLabel" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <ImageView fitHeight="81.0" fitWidth="91.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Resources/loginIblu.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="525.0" layoutY="151.0" prefHeight="317.0" prefWidth="246.0" spacing="7.0">
+         <children>
+            <JFXButton fx:id="degAModerButt" alignment="TOP_LEFT" onAction="#degAModer" prefHeight="40.0" prefWidth="227.0" ripplerFill="BLACK" stylesheets="butt.css" text="Degrada a Moderatore" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="promAdAmministButt" alignment="TOP_LEFT" onAction="#promAdAmminist" prefHeight="40.0" prefWidth="213.0" ripplerFill="BLACK" stylesheets="butt.css" text="Promuovi ad Amministratore" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="degAUtenteBaseButt" alignment="TOP_LEFT" onAction="#degAUtenteBase" prefHeight="40.0" prefWidth="291.0" ripplerFill="BLACK" stylesheets="butt.css" text="Rimuovi il permesso di Moderatore" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="promAModerButt" alignment="TOP_LEFT" onAction="#promAModer" prefHeight="40.0" prefWidth="291.0" ripplerFill="BLACK" stylesheets="butt.css" text="Promuovi a Moderatore" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <Region prefHeight="200.0" prefWidth="200.0" />
+            <JFXButton fx:id="eliminUtenteButt" alignment="TOP_LEFT" onAction="#eliminUtente" prefHeight="40.0" prefWidth="303.0" ripplerFill="BLACK" stylesheets="butt.css" text="Elimina Utente" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <JFXButton fx:id="visPubbInsButt" layoutX="48.0" layoutY="527.0" onAction="#visPubbIns" prefHeight="30.0" prefWidth="220.0" ripplerFill="BLACK" stylesheets="butt.css" text="Visualizza Pubblicazioni inserite" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="promLabel" layoutX="440.0" layoutY="48.0" text="Promosso il :" textFill="WHITE" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="DataPromozioneLabel" layoutX="541.0" layoutY="48.0" prefHeight="21.0" prefWidth="137.0" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="NumPubbLabe" layoutX="440.0" layoutY="78.0" text="Numero Pubblicazioni inserite:" textFill="WHITE" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="NPubbInsLabel" layoutX="658.0" layoutY="78.0" prefHeight="21.0" prefWidth="99.0" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="visRecInsButt" layoutX="48.0" layoutY="573.0" onAction="#visRecIns" prefHeight="30.0" prefWidth="202.0" ripplerFill="BLACK" stylesheets="butt.css" text="Visualizza Recensioni inserite" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="indietroButt" layoutX="693.0" layoutY="572.0" onAction="#close" prefHeight="32.0" prefWidth="73.0" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Indietro" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="38.0" fitWidth="43.0" layoutX="658.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Resources/back.png" />
+         </image>
+      </ImageView>
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="196.0" layoutY="150.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="196.0" layoutY="201.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="196.0" layoutY="404.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="196.0" layoutY="353.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="196.0" layoutY="307.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="196.0" layoutY="252.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="196.0" layoutY="506.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="196.0" layoutY="455.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+   </children>
+</AnchorPane>

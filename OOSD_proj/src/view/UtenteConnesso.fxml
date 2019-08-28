@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="725.0" style="-fx-background-color: #353535;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.UtenteConnessoController">
+   <children>
+      <Label layoutX="98.0" layoutY="41.0" text="Il Tuo Profilo" textFill="WHITE">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <VBox layoutX="77.0" layoutY="126.0" prefHeight="395.0" prefWidth="109.0" spacing="30.0">
+         <children>
+            <Label text="UserName" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Ruolo" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Nome" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Cognome" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Email" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label depthTest="ENABLE" text="Luogo di nascita" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Data di nascita" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Residenza" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <Line endX="273.0" endY="1.0" fill="#009dff" layoutX="142.0" layoutY="96.0" startX="-141.0" startY="1.0" stroke="#009bff" />
+      <Label fx:id="ErrLabel" layoutX="348.0" layoutY="528.0" prefHeight="27.0" prefWidth="238.0" textFill="#009bff">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="286.0" layoutY="126.0" prefHeight="395.0" prefWidth="202.0" spacing="30.0">
+         <children>
+            <Label fx:id="usernameLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="ruoloLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nomeLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="cognomeLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="luogoNascitaLabel" depthTest="ENABLE" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dataNascitaLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="residenzaLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="221.0" layoutY="111.0" prefHeight="395.0" prefWidth="30.0" spacing="20.0">
+         <children>
+            <JFXButton fx:id="modUsernameButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modUsername" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Region prefHeight="30.0" prefWidth="30.0" />
+            <JFXButton fx:id="modNomeButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modNome" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="modCognomeButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modCognome" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="modEmailButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modEmail" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="modLuogoNascitaButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modLuogoNascita" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="modDataNascitaButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modDataNascita" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="modResidenzaButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modResidenza" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <ImageView fitHeight="81.0" fitWidth="91.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Resources/loginIblu.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="modPasswordButt" alignment="CENTER" contentDisplay="CENTER" layoutX="186.0" layoutY="531.0" onAction="#modPassword" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Cambia Password" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="visRecInsButt" alignment="CENTER" contentDisplay="CENTER" layoutX="492.0" layoutY="33.0" onAction="#visRecIns" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Visualizza le mie recensioni" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="170.0" layoutY="152.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="170.0" layoutY="199.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="170.0" layoutY="252.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="170.0" layoutY="300.0" startX="-141.0" startY="1.0" strokeWidth="0.5" AnchorPane.bottomAnchor="313.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="170.0" layoutY="352.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="170.0" layoutY="402.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="170.0" layoutY="451.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="273.0" endY="1.0" fill="BLACK" layoutX="170.0" layoutY="496.0" startX="-141.0" startY="1.0" strokeWidth="0.5" AnchorPane.bottomAnchor="114.5" />
+   </children>
+</AnchorPane>

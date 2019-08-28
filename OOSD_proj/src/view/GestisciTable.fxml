@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="793.0" style="-fx-background-color: #353535;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.GestisciTableController">
+   <children>
+      <Label layoutX="66.0" layoutY="26.0" text="Visualizza" textFill="WHITE">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Line endX="260.5" endY="1.0" fill="#009dff" layoutX="148.0" layoutY="73.0" startX="-141.0" startY="1.0" stroke="#009bff" AnchorPane.leftAnchor="0.0" />
+      <JFXButton fx:id="cancRowButt" alignment="CENTER" contentDisplay="CENTER" layoutX="63.0" layoutY="422.0" onAction="#cancRow" ripplerFill="BLACK" stylesheets="butt.css" text="Cancella" textFill="WHITE" AnchorPane.leftAnchor="63.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0">
+         <image>
+            <Image url="manageTables.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="autoriTable" layoutX="14.0" layoutY="91.0" prefHeight="252.0" prefWidth="377.0" stylesheets="Table.css" visible="false" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="406.0" AnchorPane.topAnchor="91.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy></TableView>
+      <JFXButton fx:id="modRowButt" alignment="CENTER" contentDisplay="CENTER" layoutX="141.0" layoutY="422.0" onAction="#modRow" ripplerFill="BLACK" stylesheets="butt.css" text="Modifica" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="insRowButt" alignment="CENTER" contentDisplay="CENTER" layoutX="222.0" layoutY="422.0" onAction="#insRow" ripplerFill="BLACK" stylesheets="butt.css" text="Inserisci" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="errLabel" layoutX="325.0" layoutY="404.0" prefHeight="97.0" prefWidth="287.0" textFill="#009bff" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="titoloLabel" layoutX="222.0" layoutY="26.0" textFill="WHITE">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="okModRowButt" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="122.0" layoutY="465.0" onAction="#okModRow" ripplerFill="BLACK" stylesheets="butt.css" text="Ok" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="paroleTable" layoutX="24.0" layoutY="101.0" prefHeight="252.0" prefWidth="197.0" stylesheets="Table.css" visible="false" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="586.0" AnchorPane.topAnchor="91.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView fx:id="ristampeTable" layoutX="24.0" layoutY="101.0" prefHeight="252.0" prefWidth="377.0" stylesheets="Table.css" visible="false" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="406.0" AnchorPane.topAnchor="91.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView fx:id="sorgentiTable" layoutX="24.0" layoutY="101.0" prefHeight="252.0" prefWidth="749.0" stylesheets="Table.css" visible="false" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="91.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXTextField fx:id="firstText" focusColor="#009bff" layoutX="19.0" layoutY="358.0" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" style="-fx-background-color: #202020; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #909090; -jfx-label-float: true;" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="secondText" focusColor="#009bff" layoutX="206.0" layoutY="358.0" maxWidth="170.0" minWidth="170.0" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #202020; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #909090; -jfx-label-float: true;" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="dataRistampaPicker" defaultColor="#009dff" depthTest="ENABLE" layoutX="206.0" layoutY="358.0" maxWidth="170.0" minWidth="170.0" prefHeight="30.0" prefWidth="170.0" promptText="dd/mm/yyyy" style="-fx-background-color: #000000; -fx-text-color: #ffffff; -fx-prompt-text-fill: #ffffff; -fx-text: #ffffff;" stylesheets="dataPicker.css" visible="false" />
+      <JFXComboBox fx:id="formatoBox" focusColor="#009bff" layoutX="581.0" layoutY="358.0" maxWidth="170.0" minWidth="170.0" prefHeight="30.0" prefWidth="170.0" promptText="Formato" style="-jfx-label-float: true;" stylesheets="comboBox.css" visible="false" />
+      <JFXComboBox fx:id="tipoBox" focusColor="#009bff" layoutX="397.0" layoutY="358.0" prefHeight="30.0" prefWidth="170.0" promptText="Tipo" style="-jfx-label-float: true;" stylesheets="comboBox.css" visible="false" />
+      <JFXButton fx:id="indietroModRowButt" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="177.0" layoutY="465.0" onAction="#indietroModRow" ripplerFill="BLACK" stylesheets="butt.css" text="Annulla Modifica" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+/model.class
+/Autore.class
+/ParolaChiave.class
+/Pubblicazione.class
+/Recensione.class
+/Ristampa.class
+/Sorgente.class
+/UtenteBase.class
+/UtenteModeratore.class
+/EntryStoria.class
+/TipiEnum$RuoloUtente.class
+/TipiEnum$TipoStoria.class
+/TipiEnum.class
+/TipiEnum$tipoRecensioni.class
+/TipiEnum$tipoRicerca.class
+/ObservablePubblicazioni.class

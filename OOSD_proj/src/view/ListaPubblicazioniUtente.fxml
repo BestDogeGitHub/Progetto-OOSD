@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="900.0" style="-fx-background-color: #353535;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.ListaPubblicazioniUtenteController">
+	<children>
+		<TableView fx:id="ListaPubbTable" layoutY="174.0" prefHeight="267.0" prefWidth="764.0" stylesheets="Table.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+			<columnResizePolicy>
+				<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+			</columnResizePolicy>
+		</TableView>
+		<JFXButton fx:id="pagSuccButt" alignment="CENTER" contentDisplay="CENTER" layoutX="619.0" layoutY="584.0" onAction="#paginaSuccessiva" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Pagina Successiva" textFill="WHITE" AnchorPane.rightAnchor="14.0">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</JFXButton>
+		<JFXButton fx:id="pagPrecButt" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="467.0" layoutY="584.0" onAction="#paginaPrecedente" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Pagina Precedente" textFill="WHITE" AnchorPane.rightAnchor="162.0">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</JFXButton>
+		<JFXButton fx:id="goToPubbButt" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="549.0" onAction="#apriPubblicazione" prefHeight="37.0" prefWidth="221.0" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Vai al Profilo della Pubblicazione" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</JFXButton>
+		<Line endX="318.878662109375" endY="12.5" layoutX="103.0" layoutY="85.0" startX="-100.99998474121094" startY="12.5" stroke="#009bff" strokeWidth="3.0" />
+		<Line endX="498.25" endY="584.0" layoutX="112.0" layoutY="46.0" startX="498.25" startY="522.128662109375" stroke="#009bff" strokeWidth="3.0" AnchorPane.rightAnchor="152.25" />
+		<Label layoutX="96.0" layoutY="44.0" text="Lista Pubblicazioni di :" textFill="WHITE">
+			<font>
+				<Font size="36.0" />
+			</font>
+		</Label>
+		<Label fx:id="errLabel" layoutX="257.0" layoutY="516.0" prefHeight="43.0" prefWidth="208.0" textFill="#009bff" wrapText="true" AnchorPane.leftAnchor="257.0">
+			<font>
+				<Font name="System Bold" size="14.0" />
+			</font>
+		</Label>
+		<ImageView fitHeight="87.0" fitWidth="82.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../Resources/lista.png" />
+			</image>
+		</ImageView>
+      <JFXButton fx:id="goToUtenteButt" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="500.0" onAction="#tornaAlProfiloUtente" prefHeight="37.0" prefWidth="160.0" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Torna al Profilo Utente" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="titoloLabel" layoutX="448.0" layoutY="44.0" prefHeight="55.0" prefWidth="438.0" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+	</children>
+</AnchorPane>

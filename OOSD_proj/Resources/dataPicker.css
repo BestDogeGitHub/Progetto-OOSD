@@ -1,0 +1,7 @@
+.jfx-date-picker .text-field{
+-fx-focus-color: #009bff;
+-fx-prompt-text-fill: #909090;
+-fx-text-fill: #dddddd;
+-fx-background-color: #202020;
+-fx-padding: 0 0 0 5;
+}

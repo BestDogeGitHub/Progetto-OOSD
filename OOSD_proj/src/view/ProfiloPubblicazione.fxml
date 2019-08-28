@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="790.0" style="-fx-background-color: #353535;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.ProfiloPubblicazioneController">
+   <children>
+      <Label layoutX="94.0" layoutY="46.0" text="Profilo Pubblicazione" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <VBox layoutX="76.0" layoutY="126.0" prefHeight="427.0" prefWidth="150.0" spacing="20.0">
+         <children>
+            <Label text="Titolo :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Autori :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Editore :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Parole Chiave :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="ISBN :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Numero Like :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Numero Recensioni :" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label depthTest="ENABLE" text="Data Pubblicazione :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Data Ultima Modifica :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Numero Pagine :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Lingua :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <Line endX="304.0" endY="1.0" fill="#009dff" layoutX="142.0" layoutY="96.0" startX="-141.0" startY="1.0" stroke="#009bff" />
+      <JFXButton fx:id="eliminaPubbButt" alignment="CENTER" contentDisplay="CENTER" layoutX="622.0" layoutY="14.0" onAction="#eliminaPubb" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Elimina Pubblicazione" textFill="WHITE" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <VBox layoutX="237.0" layoutY="115.0" prefHeight="439.0" prefWidth="30.0" spacing="11.0">
+         <children>
+            <JFXButton fx:id="modTitoloButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modTitolo" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="modAutoriButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modAutori" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="modEditoreButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modEditore" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="modParoleButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modParole" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="modIsbnButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modIsbn" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Region prefHeight="30.0" prefWidth="30.0" />
+            <Region prefHeight="30.0" prefWidth="30.0" />
+            <JFXButton fx:id="modDataPubbButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modDataPubb" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Region prefHeight="30.0" prefWidth="30.0" />
+            <JFXButton fx:id="modNPagButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modNPag" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="modLinguaButt" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#modLingua" prefHeight="30.0" prefWidth="30.0" ripplerFill="#009bff" style="-fx-background-color: #202020;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Resources/modifica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets top="2.0" />
+         </padding>
+      </VBox>
+      <ImageView fitHeight="81.0" fitWidth="80.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Resources/Pubb.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="619.0" layoutY="209.0" prefHeight="140.0" prefWidth="160.0" spacing="8.0" AnchorPane.rightAnchor="11.0">
+         <children>
+            <JFXButton fx:id="visSorgentiButt" alignment="CENTER" contentDisplay="CENTER" onAction="#visSorgenti" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Visualizza Sorgenti" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="visRistampeButt" alignment="CENTER" contentDisplay="CENTER" onAction="#visRistampe" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Visualizza Ristampe" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="visIndiceButt" alignment="CENTER" contentDisplay="CENTER" onAction="#visIndice" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Visualizza Indice" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="visDescrizioneButt" alignment="CENTER" contentDisplay="CENTER" onAction="#visDescrizione" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Visualizza Descrizione" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="visStoricoButt" alignment="CENTER" contentDisplay="CENTER" onAction="#visStorico" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Visualizza Storico" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="visRecensioniButt" alignment="CENTER" contentDisplay="CENTER" onAction="#visRecensioni" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Visualizza Recensioni" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <VBox layoutX="272.0" layoutY="126.0" prefHeight="449.0" prefWidth="270.0" spacing="20.0" AnchorPane.leftAnchor="272.0" AnchorPane.rightAnchor="183.0">
+         <children>
+            <Label fx:id="titoloLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="autoriLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="editoreLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="paroleLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="isbnLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nLikeLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nRecensioniLabel" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dataPubbLabel" depthTest="ENABLE" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dataUltModLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nPagLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="linguaLabel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <JFXButton fx:id="insLikeButt" alignment="CENTER" contentDisplay="CENTER" layoutX="76.0" layoutY="575.0" onAction="#insLike" prefHeight="30.0" prefWidth="97.0" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Metti Like" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="insRecensioneButt" alignment="CENTER" contentDisplay="CENTER" layoutX="187.0" layoutY="575.0" onAction="#insRecensione" prefHeight="30.0" prefWidth="171.0" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Scrivi Una Recensione" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="indietroButt" layoutX="703.0" layoutY="589.0" onAction="#close" prefHeight="32.0" prefWidth="73.0" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Indietro" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="32.0" fitWidth="37.0" layoutX="666.0" layoutY="588.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Resources/back.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="delLikeButt" alignment="CENTER" contentDisplay="CENTER" layoutX="76.0" layoutY="575.0" onAction="#delLike" prefHeight="30.0" prefWidth="97.0" ripplerFill="BLACK" stylesheets="@../../Resources/butt.css" text="Togli Like" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Line endX="395.0" endY="0.9999847412109375" fill="BLACK" layoutX="196.0" layoutY="149.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="395.0" endY="0.9999847412109375" fill="BLACK" layoutX="196.0" layoutY="190.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="395.0" endY="0.9999847412109375" fill="BLACK" layoutX="196.0" layoutY="231.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="395.0" endY="0.9999847412109375" fill="BLACK" layoutX="196.0" layoutY="272.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="395.0" endY="0.9999847412109375" fill="BLACK" layoutX="196.0" layoutY="318.0" startX="-141.0" startY="1.0" strokeWidth="0.5" AnchorPane.bottomAnchor="322.2928931117058" />
+      <Line endX="395.0" endY="0.9999847412109375" fill="BLACK" layoutX="196.0" layoutY="349.0" startX="-141.0" startY="1.0" strokeWidth="0.5" AnchorPane.bottomAnchor="285.2928931117058" />
+      <Line endX="395.0" endY="0.9999847412109375" fill="BLACK" layoutX="196.0" layoutY="389.0" startX="-141.0" startY="1.0" strokeWidth="0.5" AnchorPane.bottomAnchor="244.29289311170578" />
+      <Line endX="395.0" endY="0.9999847412109375" fill="BLACK" layoutX="196.0" layoutY="435.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+      <Line endX="395.0" endY="0.9999847412109375" fill="BLACK" layoutX="196.0" layoutY="515.0" startX="-141.0" startY="1.0" strokeWidth="0.5" AnchorPane.bottomAnchor="121.29289311170578" />
+      <Line endX="395.0" endY="0.9999847412109375" fill="BLACK" layoutX="196.0" layoutY="553.0" startX="-141.0" startY="1.0" strokeWidth="0.5" AnchorPane.bottomAnchor="78.87866419553757" />
+      <Line endX="395.0" endY="0.9999847412109375" fill="BLACK" layoutX="196.0" layoutY="474.0" startX="-141.0" startY="1.0" strokeWidth="0.5" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" minWidth="160.0" prefHeight="424.0" prefWidth="160.0" spacing="5.0" style="-fx-background-color: #505050;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.MenuLateraleController">
+   <children>
+      <JFXButton fx:id="home" onAction="#visHome" prefHeight="45.0" prefWidth="150.0" ripplerFill="BLACK" style="-fx-background-color: #202020;" text="Home" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="catalogo" onAction="#visCatalogo" prefHeight="45.0" prefWidth="150.0" ripplerFill="BLACK" style="-fx-background-color: #202020;" text="Catalogo" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ricercaLibro" onAction="#visRicercaPubblicazioni" prefHeight="45.0" prefWidth="150.0" ripplerFill="BLACK" style="-fx-background-color: #202020;" text="Ricerca" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="profilo" onAction="#visProfilo" prefHeight="45.0" prefWidth="150.0" ripplerFill="BLACK" style="-fx-background-color: #202020;" text="Profilo" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="listaUtenti" onAction="#visListaUtenti" prefHeight="45.0" prefWidth="150.0" ripplerFill="BLACK" style="-fx-background-color: #202020;" text="Lista Utenti" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </JFXButton>
+      <JFXButton fx:id="storico" onAction="#visStorico" prefHeight="45.0" prefWidth="150.0" ripplerFill="BLACK" style="-fx-background-color: #202020;" text="Storico" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="inserisciLibro" onAction="#visInserisciPubblicazione" prefHeight="45.0" prefWidth="150.0" ripplerFill="BLACK" style="-fx-background-color: #202020;" text="Inserisci Libro" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="RecNonAppButt" onAction="#visRecNonApp" prefHeight="67.0" prefWidth="150.0" ripplerFill="BLACK" style="-fx-background-color: #202020;" text="Recensioni Non Approvate" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <effect>
+      <DropShadow>
+         <input>
+            <InnerShadow />
+         </input>
+      </DropShadow>
+   </effect>
+   <padding>
+      <Insets bottom="5.0" top="5.0" />
+   </padding>
+</VBox>
