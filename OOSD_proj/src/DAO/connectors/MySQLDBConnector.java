@@ -9,8 +9,8 @@ public class MySQLDBConnector {
 	public static Connection creaConnessione() 
 	{	
 		String url = "jdbc:mysql://localhost:3306/progettodb?serverTimezone=CET";
-		String user = "dogelord";
-		String password = "doge";
+		String user = "root";
+		String password = "r00t";
 		
 		try
 		{
