@@ -38,6 +38,9 @@ public class MySQLDBConnector {
 		 return null;
 	}
 	
+	/**
+	 * questo metodo viene chiamato nel main in modo da inizializzare i controller per lavorare con un database di tipo mysql caricando i rispettivi dao
+	 */
 	public static void mysqlInit()
 	{
 		ControllerAutore.setDao(new MySQLDAOAutoreImpl());
