@@ -1,12 +1,14 @@
 package controller;
 
-import DAO.MySQLImplementation.MySQLDAOLikeImpl;
 import DAO.interfaces.DAOLike;
 
 public class ControllerLikes {
 	
-	private static DAOLike daoLike = new MySQLDAOLikeImpl();
-	
+	private static DAOLike daoLike;
+	public static void setDao( DAOLike dao )
+	{
+		daoLike = dao;
+	}
 	/**
 	 * controlla se l'utente connesso ha messo like alla pubblicazione visualizzata
 	 * 

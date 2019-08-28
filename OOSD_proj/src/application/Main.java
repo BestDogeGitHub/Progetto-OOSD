@@ -1,5 +1,6 @@
 package application;
 
+import DAO.connectors.MySQLDBConnector;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -25,6 +26,7 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		DAO.connectors.MySQLDBConnector.creaConnessione();
+		MySQLDBConnector.mysqlInit();
 		launch(args);
 	}
 	

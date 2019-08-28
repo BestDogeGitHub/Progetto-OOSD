@@ -1,12 +1,15 @@
 package controller;
 
 import java.util.ArrayList;
-import DAO.MySQLImplementation.MySQLDAORecensioneImpl;
 import DAO.interfaces.DAORecensione;
 import model.*;
 
 public class ControllerRecensione {
-	private static DAORecensione daoRecensione = new MySQLDAORecensioneImpl();
+	private static DAORecensione daoRecensione;
+	public static void setDao( DAORecensione dao )
+	{
+		daoRecensione = dao;
+	}
 	/**
 	 * conserva la lista di recensioni visualizzata 
 	 */

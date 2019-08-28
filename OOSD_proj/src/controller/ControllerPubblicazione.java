@@ -2,12 +2,15 @@ package controller;
 
 
 import java.util.ArrayList;
-import DAO.MySQLImplementation.*;
 import DAO.interfaces.DAOPubblicazione;
 import model.*;
 
 public class ControllerPubblicazione {
-	private static DAOPubblicazione daoPubblicazione = new MySQLDAOPubblicazioneImpl();
+	private static DAOPubblicazione daoPubblicazione;
+	public static void setDao( DAOPubblicazione dao )
+	{
+		daoPubblicazione = dao;
+	}
 	/**
 	 * conserva la pubblicazione visualizzata dall'utente connesso
 	 */

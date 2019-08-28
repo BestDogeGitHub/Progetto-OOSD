@@ -1,13 +1,15 @@
 package controller;
 
 import java.util.ArrayList;
-
-import DAO.MySQLImplementation.MySQLDAOSorgenteImpl;
 import DAO.interfaces.DAOSorgente;
 import model.*;
 
 public class ControllerSorgente {
-	private static DAOSorgente daoSorgente = new MySQLDAOSorgenteImpl();
+	private static DAOSorgente daoSorgente;
+	public static void setDao( DAOSorgente dao )
+	{
+		daoSorgente = dao;
+	}
 	/**
 	 * conserva la lista di sorgenti visualizzate
 	 */

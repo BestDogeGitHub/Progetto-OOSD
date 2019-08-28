@@ -1,12 +1,15 @@
 package controller;
 
 import java.util.ArrayList;
-import DAO.MySQLImplementation.MySQLDAOParolaChiaveImpl;
 import DAO.interfaces.DAOParolaChiave;
 import model.*;
 
 public class ControllerParolaChiave {
-	private static DAOParolaChiave daoParola = new MySQLDAOParolaChiaveImpl();
+	private static DAOParolaChiave daoParola;
+	public static void setDao( DAOParolaChiave dao )
+	{
+		daoParola = dao;
+	}
 	/**
 	 * conserva la lista di parole chiave visualizzate
 	 */

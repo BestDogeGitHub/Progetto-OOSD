@@ -1,14 +1,16 @@
 package controller;
 
 import java.util.ArrayList;
-
-import DAO.MySQLImplementation.MySQLDAOStoriaImpl;
 import DAO.interfaces.DAOStoria;
 import model.EntryStoria;
 import model.Pubblicazione;
 
 public class ControllerStorico {
-	private static DAOStoria daoStoria = new MySQLDAOStoriaImpl();
+	private static DAOStoria daoStoria;
+	public static void setDao( DAOStoria dao )
+	{
+		daoStoria = dao;
+	}
 	/**
 	 * conserva la pagina dello storico al momento visualizzata
 	 */

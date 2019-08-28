@@ -1,7 +1,6 @@
 package controller;
 
 import java.util.ArrayList;
-import DAO.MySQLImplementation.MySQLDAOAutoreImpl;
 import DAO.interfaces.DAOAutore;
 import model.*;
 
@@ -10,7 +9,11 @@ import model.*;
  *
  */
 public class ControllerAutore {
-	private static DAOAutore daoAutore = new MySQLDAOAutoreImpl();
+	private static DAOAutore daoAutore;
+	public static void setDao( DAOAutore dao )
+	{
+		daoAutore = dao;
+	}
 	/**
 	 *  array list in cui verranno conservate le lista di autori cercate
 	 */

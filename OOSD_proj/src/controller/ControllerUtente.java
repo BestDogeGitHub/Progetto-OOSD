@@ -3,11 +3,14 @@ package controller;
 import model.*;
 
 import java.util.*;
-import DAO.MySQLImplementation.MySQLDAOUtenteImpl;
 import DAO.interfaces.DAOUtente;
 
 public class ControllerUtente {
-	private static DAOUtente daoUtente = new MySQLDAOUtenteImpl();
+	private static DAOUtente daoUtente;
+	public static void setDao( DAOUtente dao )
+	{
+		daoUtente = dao;
+	}
 	/**
 	 *  conserva le informazioni dell'utente connesso al software
 	 */

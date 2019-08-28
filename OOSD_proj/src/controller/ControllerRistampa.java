@@ -1,12 +1,15 @@
 package controller;
 
 import java.util.ArrayList;
-import DAO.MySQLImplementation.MySQLDAORistampaImpl;
 import DAO.interfaces.DAORistampa;
 import model.*;
 
 public class ControllerRistampa {
-	private static DAORistampa daoRistampa = new MySQLDAORistampaImpl();
+	private static DAORistampa daoRistampa;
+	public static void setDao( DAORistampa dao )
+	{
+		daoRistampa = dao;
+	}
 	/**
 	 * conserva la lista di ristampe visualizzate
 	 */
