@@ -60,6 +60,7 @@ public class StoricoController implements Initializable{
     	EntryStoria entry = StoricoTableTable.getSelectionModel().getSelectedItem();
     	if( entry == null ) { ErrLabel.setText("Devi Prima Selezionare una Pubblicazione"); return; }
     	int id = entry.getIdPubb();
+    	if( id == 0 ) { ErrLabel.setText("La Pubblicazione è stata eliminata"); return; }
     	ControllerPubblicazione.setPubbByID(id);
     	
 		try {

@@ -160,10 +160,12 @@ public class GestisciTableController implements Initializable{
 	    		if( tipo == null ) { errLabel.setText("Inserisci il tipo"); return; }
 	    		if( formato == null ) { errLabel.setText("Inserisci il formato"); return; }
 
-	    		if ( !( s.getURI().equals(first) ) ) ControllerSorgente.modSorgente(s, "URI", first);
-	    		if ( !( s.getDescrizione().equals(second) ) ) ControllerSorgente.modSorgente(s, "Descrizione", second);
-	    		if ( !( s.getTipo().equals(tipo) ) ) ControllerSorgente.modSorgente(s, "Tipo", tipo);
-	    		if ( !( s.getFormato().equals(formato) ) ) ControllerSorgente.modSorgente(s, "Formato", formato);
+	    		if ( !( s.getURI().equals(first) ) ) { ControllerSorgente.modSorgente(s, "URI", first) ; s.setURI(first);}
+	    		if ( !( s.getDescrizione().equals(second) ) ) { ControllerSorgente.modSorgente(s, "Descrizione", second); s.setDescrizione(second);}
+	    		if ( !( s.getTipo().equals(tipo) ) ) { ControllerSorgente.modSorgente(s, "Tipo", tipo); s.setTipo(tipo);}
+	    		if ( !( s.getFormato().equals(formato) ) ) { ControllerSorgente.modSorgente(s, "Formato", formato); s.setFormato(formato);}
+	    		
+	    		sorgentiTable.getItems().add(s);
 			  break;
 		  case "Ristampe":
 			    data = dataRistampaPicker.getValue();
@@ -174,14 +176,16 @@ public class GestisciTableController implements Initializable{
 	    		} catch( NumberFormatException ex) { errLabel.setText("inserisci un numero corretto"); return; }
 	    		if( numero <= 0 ) { errLabel.setText("inserisci un numero corretto"); return; }
 	    		
-	    		if ( r.getNumero() != numero ) ControllerRistampa.modRistampa(r, "numero", Integer.toString(numero));
-	    		if ( !( r.getDataRistampa().isEqual(data) ) ) ControllerRistampa.modRistampa( r, "dataristampa", data.toString() );
+	    		if ( r.getNumero() != numero ) { ControllerRistampa.modRistampa(r, "numero", Integer.toString(numero)); r.setNumero(numero); }
+	    		if ( !( r.getDataRistampa().isEqual(data) ) ) { ControllerRistampa.modRistampa( r, "dataristampa", data.toString() ); r.setDataRistampa(data); }
+	    		ristampeTable.getItems().add(r);
 			  break;
     	}
     	cancRowButt.setDisable(false);
     	okModRowButt.setDisable(true);
     	insRowButt.setDisable(false);
     	modRowButt.setDisable(false);
+    	indietroModRowButt.setDisable(true);
     }
     
     @FXML private JFXButton insRowButt;

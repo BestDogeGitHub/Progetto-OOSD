@@ -37,7 +37,10 @@ public class DettagliRecensioniController implements Initializable{
     @FXML private JFXButton approvaButt;
     @FXML void approvaRec() 
     {
-    	ControllerRecensione.approvaRecensione(ControllerPubblicazione.getPubb().getID(), ControllerUtente.getUtente().getID());
+    	ControllerPubblicazione.setPubbByID(ControllerRecensione.getDettagliRecensione().getIDPubblicazione());
+    	if ( ControllerUtente.getProfiloUtente() == null ) 
+    		ControllerRecensione.approvaRecensione( ControllerPubblicazione.getPubb().getID(), ControllerUtente.getUtenteByUsername( ControllerRecensione.getDettagliRecensione().getUsername()).getID());
+    	else ControllerRecensione.approvaRecensione(ControllerPubblicazione.getPubb().getID(), ControllerUtente.getProfiloUtente().getID());
     	approvaButt.setDisable(true);
     	ApprovazioneLabel.setText("Approvata");
     }
@@ -55,7 +58,7 @@ public class DettagliRecensioniController implements Initializable{
     @FXML void apriProfiloApprovatore(ActionEvent event) 
     {
     	errLabel.setText("");
-    	int id = ControllerRecensione.getDettagliRecensione().getIDUtente();
+    	int id = ControllerRecensione.getDettagliRecensione().getApprovatoDa();
     	ControllerUtente.setProfiloUtenteByID(id);;
 
 		try {

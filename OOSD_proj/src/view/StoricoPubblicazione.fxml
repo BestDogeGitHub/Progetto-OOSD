@@ -38,7 +38,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="errLabel" layoutX="14.0" layoutY="237.0" prefHeight="90.0" prefWidth="208.0" textFill="#009bff" wrapText="true" AnchorPane.leftAnchor="14.0">
+      <Label fx:id="errLabel" layoutX="6.0" layoutY="237.0" prefHeight="178.0" prefWidth="212.0" textFill="#009bff" wrapText="true" AnchorPane.leftAnchor="6.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

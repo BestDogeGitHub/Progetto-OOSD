@@ -90,7 +90,7 @@ public class ModificaProfiloController implements Initializable{
 		  case "nome":	
 		  case "cognome":
 			  nuovoValore = ControllerUtility.formatInput(Text.getText()); 
-			  if ( nuovoValore.length() == 0 ) { errLabel.setText("inserisci il nuovo valore"); return; }
+			  if ( nuovoValore == null ) { errLabel.setText("inserisci il nuovo valore"); return; }
 			  if ( nuovoValore.length() > 45 ) { errLabel.setText("limite di caratteri superato"); return; }
 			  ControllerUtente.modDatiUtente(campo, nuovoValore);
 			  break;
@@ -216,7 +216,7 @@ public class ModificaProfiloController implements Initializable{
 			  break;
 		  case "lingua":
 			  titoloLabel.setText("Inserisci la lingua");
-			  Text.setVisible(true);
+			  Text.setVisible(false);
 			  dataBox.setVisible(true);
 			  addcityButt1.setVisible(false);
 			  List<String> linguaList = new ArrayList<String>();

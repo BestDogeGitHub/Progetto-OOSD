@@ -1,17 +1,20 @@
 package viewController;
 
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
 
 import controller.ControllerPubblicazione;
+import controller.ControllerUtente;
 import controller.ControllerUtility;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import model.TipiEnum.RuoloUtente;
 
-public class InserisciTestoController 
+public class InserisciTestoController
 {
 	@FXML private Label errLabel;
 	private String testo ="";
@@ -47,11 +50,29 @@ public class InserisciTestoController
     	testoText.setEditable(true);
     }
     
-    // modifca la funzionalità della finestra, da inserire testo a modificare testo
+    // modifica la funzionalità della finestra, da inserire testo a modificare testo
     public void setMode()
     {
     	okButt.setVisible(false);
-    	modificaButt.setVisible(true);
     	testoText.setEditable(false);
+    	if ( ControllerUtente.getUtente() == null ) { return; }
+		else
+		{
+			RuoloUtente ruolo = ControllerUtente.getUtente().getRuolo();
+		
+			switch ( ruolo )
+			{
+				case Passivo :
+				case Attivo :
+					break;
+				case Moderatore :
+				case Amministratore :
+				case SuperAmministratore :
+					modificaButt.setVisible(true);
+					break;
+			default:
+				break;
+			}
+		}
     }
 }
